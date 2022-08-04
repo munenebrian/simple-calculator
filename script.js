@@ -43,8 +43,12 @@ class Calculator{
             case '÷':
                 computation = prev / current
                 break   
+                default:
+                    return
         }
-
+     this.currentOperand = computation
+     this.operation = undefined
+     this.previousOperand = ''
     }
     updateDisplay(){
         this.currentOperandTextElement.innerText = this.currentOperand
